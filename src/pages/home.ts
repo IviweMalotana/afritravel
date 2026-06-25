@@ -47,10 +47,10 @@ export const homeRoute: Route = {
 
       <section class="section banner">
         <div>
-          <h2>Travelling visa-free?</h2>
-          <p class="muted">Check which African countries you can enter with just your passport.</p>
+          <h2>Get your Visa-Free Pass</h2>
+          <p class="muted">Register once and travel visa-free across participating African nations — approved instantly.</p>
         </div>
-        <a class="btn btn-primary" href="#/visa">Open visa checker</a>
+        <a class="btn btn-primary" href="#/visa">Register for a pass</a>
       </section>
     `);
   },

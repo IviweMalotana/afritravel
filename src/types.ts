@@ -56,6 +56,20 @@ export interface Booking {
   createdAt: string;
 }
 
+/** A registered Visa-Free Travel Pass issued to a traveller. */
+export interface TravelPass {
+  id: string; // human-facing pass number, e.g. AFP-XXXXXX
+  holder: string;
+  passportNo: string;
+  nationality: string; // country code (alpha-2)
+  destination: string; // country code (alpha-2)
+  validFrom: string; // ISO date
+  validUntil: string; // ISO date
+  purpose: "Tourism" | "Business" | "Family" | "Transit";
+  status: "approved";
+  issuedAt: string; // ISO timestamp
+}
+
 export type Role = "customer" | "merchant" | "admin" | "visa";
 
 export interface Merchant {

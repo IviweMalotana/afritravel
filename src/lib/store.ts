@@ -1,4 +1,4 @@
-import type { Booking, Role } from "../types.ts";
+import type { Booking, Role, TravelPass } from "../types.ts";
 
 // Minimal reactive store persisted to localStorage. Demo-only — a real build
 // would back this with an API + database (see docs/PROJECT_PLAN.md).
@@ -7,12 +7,14 @@ const KEY = "afritravel.state.v1";
 
 interface State {
   bookings: Booking[];
+  passes: TravelPass[];
   role: Role;
   user: { name: string; email: string } | null;
 }
 
 const defaultState: State = {
   bookings: [],
+  passes: [],
   role: "customer",
   user: null,
 };
@@ -58,6 +60,13 @@ export const store = {
       b.id === id ? { ...b, status } : b,
     );
     persist();
+  },
+  addPass(p: TravelPass) {
+    state.passes = [p, ...state.passes];
+    persist();
+  },
+  passById(id: string): TravelPass | undefined {
+    return state.passes.find((p) => p.id === id);
   },
   setRole(role: Role) {
     state.role = role;

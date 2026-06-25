@@ -178,6 +178,51 @@ h1 { font-size: 2rem; }
 .visa-country { font-weight: 600; }
 .visa-tag { font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; }
 
+/* ---- Visa-Free Pass: registration ---- */
+.eyebrow-light { color: #ffe6a8; }
+.hero-visa { background: radial-gradient(120% 120% at 20% 0%, #14a08b 0%, var(--teal) 50%, var(--teal-dark) 100%); }
+.visa-steps { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.visa-step { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); padding: 0.5rem 0.9rem; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+.visa-step-n { display: inline-flex; width: 22px; height: 22px; align-items: center; justify-content: center; background: var(--gold); color: var(--ink); border-radius: 50%; font-size: 0.8rem; font-weight: 800; }
+.visa-register { margin-top: 0.5rem; }
+.visa-register h2 { margin-top: 0; }
+.form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.checkbox { flex-direction: row !important; align-items: flex-start; gap: 0.5rem !important; font-weight: 500 !important; color: var(--ink) !important; font-size: 0.85rem; }
+.checkbox input { width: auto; margin-top: 0.15rem; }
+.visa-side .amenities { grid-template-columns: 1fr; }
+.visa-pass-list { display: grid; gap: 0.5rem; }
+.visa-pass-row { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 0.6rem; border: 1px solid var(--line); border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+.visa-pass-row:hover { border-color: var(--teal); background: #f0f7f5; }
+
+/* ---- Issued pass ---- */
+.issued-banner { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.small-tick { width: 44px; height: 44px; font-size: 1.4rem; margin: 0; }
+.pass { border-radius: 18px; overflow: hidden; box-shadow: 0 16px 40px rgba(16,40,35,0.18); border: 1px solid var(--line); background: #fff; }
+.pass-top { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1.25rem; background: linear-gradient(120deg, var(--teal), var(--teal-dark)); color: #fff; }
+.pass-brand { color: #fff; font-size: 1.05rem; }
+.pass-kind { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; background: var(--gold); color: var(--ink); padding: 0.25rem 0.6rem; border-radius: 999px; }
+.pass-body { padding: 1.25rem; }
+.pass-route { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 1px dashed var(--line); }
+.pass-node { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
+.pass-flag { font-size: 2.4rem; line-height: 1; }
+.pass-cc { font-weight: 800; font-size: 1.1rem; letter-spacing: 0.05em; }
+.pass-arrow { color: var(--teal); font-size: 1.4rem; }
+.pass-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem 1rem; margin-top: 1.1rem; }
+.pass-grid > div { display: flex; flex-direction: column; }
+.pass-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+.pass-val { font-weight: 600; }
+.pass-status { color: var(--teal); }
+.pass-foot { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem; background: #f1f6f4; border-top: 1px dashed var(--line); }
+.pass-qr { flex-shrink: 0; }
+.pass-qr .qr { display: block; width: 96px; height: 96px; border-radius: 8px; }
+.pass-foot-meta { display: flex; flex-direction: column; gap: 0.1rem; }
+.pass-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.25rem 0; justify-content: center; }
+
+@media print {
+  .nav, .footer, .pass-actions, .issued-banner, .muted.small.center { display: none !important; }
+  .pass { box-shadow: none; }
+}
+
 /* ---- Portals (merchant/admin) ---- */
 .portal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
@@ -220,4 +265,6 @@ tr:last-child td { border-bottom: none; }
   .nav-links { display: none; }
   .search-bar { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: 1fr; }
+  .form-2col { grid-template-columns: 1fr; }
+  .visa-pass-row { grid-template-columns: 1fr auto; }
 }

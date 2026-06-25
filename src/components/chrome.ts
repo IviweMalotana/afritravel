@@ -6,7 +6,7 @@ export function nav(): string {
   const { user, role } = store.get();
   const portalLinks = [
     { href: "#/", label: "Stays" },
-    { href: "#/visa", label: "Visa-free" },
+    { href: "#/visa", label: "Visa-Free Pass" },
     { href: "#/merchant", label: "Merchant" },
     { href: "#/admin", label: "Admin" },
   ];
@@ -43,7 +43,7 @@ export function footer(): string {
         <div>
           <h4>Explore</h4>
           <a href="#/">All stays</a>
-          <a href="#/visa">Visa-free travel</a>
+          <a href="#/visa">Visa-Free Pass</a>
         </div>
         <div>
           <h4>Partners</h4>

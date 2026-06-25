@@ -6,6 +6,7 @@ import { listingRoute } from "./pages/listing.ts";
 import { checkoutRoute } from "./pages/checkout.ts";
 import { confirmationRoute } from "./pages/confirmation.ts";
 import { visaRoute } from "./pages/visa.ts";
+import { passRoute } from "./pages/pass.ts";
 import { merchantRoute } from "./pages/merchant.ts";
 import { adminRoute } from "./pages/admin.ts";
 import { loginRoute, notFoundRoute } from "./pages/login.ts";
@@ -33,6 +34,7 @@ const customerRoutes = [
 initRouter(app, [
   ...customerRoutes,
   visaRoute,
+  passRoute,
   merchantRoute,
   adminRoute,
   notFoundRoute,

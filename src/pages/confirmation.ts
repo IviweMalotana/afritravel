@@ -4,7 +4,6 @@ import { store } from "../lib/store.ts";
 import { stayById } from "../data/stays.ts";
 import { money } from "../lib/format.ts";
 import { countryByCode } from "../data/countries.ts";
-import { getVisaPolicy, POLICY_META } from "../data/visa.ts";
 
 export const confirmationRoute: Route = {
   path: "/confirmation/:id",
@@ -13,10 +12,6 @@ export const confirmationRoute: Route = {
     if (!booking) return shell('<section class="section"><h2>Booking not found</h2><a class="link" href="#/">Home</a></section>');
     const stay = stayById(booking.stayId);
     const country = countryByCode(stay?.countryCode ?? "");
-
-    // Friendly nudge: visa guidance to the destination (assume Nigerian passport as demo default).
-    const policy = stay ? getVisaPolicy("NG", stay.countryCode) : "visa-free";
-    const meta = POLICY_META[policy];
 
     return shell(`
       <section class="section confirm">
@@ -32,10 +27,10 @@ export const confirmationRoute: Route = {
             <div class="quote-row"><span>Paid via ${booking.paymentMethod === "momo" ? "Mobile Money" : "Paystack"}</span><span></span></div>
             <div class="quote-row quote-total"><span>Total paid</span><span>${money(booking.total, booking.currency)}</span></div>
           </div>
-          <div class="visa-nudge" style="border-color:${meta.color}">
-            <strong style="color:${meta.color}">${country?.flag ?? ""} ${meta.label}</strong>
-            <span class="muted small">${meta.blurb} (Nigerian passport, demo.)
-              <a class="link" href="#/visa?to=${stay?.countryCode ?? ""}">Check your passport →</a></span>
+          <div class="visa-nudge" style="border-color:#0f7b6c">
+            <strong style="color:#0f7b6c">${country?.flag ?? ""} Travelling to ${country?.name ?? "your destination"}?</strong>
+            <span class="muted small">Skip the visa queue — register for your free AfriTravel Visa-Free Pass and breeze through immigration.
+              <a class="link" href="#/visa">Get your pass →</a></span>
           </div>
           <a class="btn btn-primary" href="#/">Back to stays</a>
         </div>

@@ -19,7 +19,7 @@ so the same adapters and types drop into a real backend later — see
 | Portal | Route | What it does |
 | --- | --- | --- |
 | **Customer** | `#/`, `#/search`, `#/stay/:id`, `#/checkout/:id` | Browse & search stays, view listings, book, pay via Paystack/MoMo, get a confirmation with visa guidance for the destination. |
-| **Visa-free** | `#/visa` | Pick your passport and see which African countries are visa-free / visa-on-arrival / eTA / visa-required. |
+| **Visa-Free Pass** | `#/visa`, `#/pass/:id` | Register for visa-free travel across partner African nations, get an instantly-approved digital pass (with a scannable code) to show at the border. |
 | **Merchant** | `#/merchant` | Host dashboard: listings, bookings, revenue, payout method. |
 | **Admin** | `#/admin` | Marketplace overview: inventory by region, paid volume, recent transactions, reset demo data. |
 
@@ -68,12 +68,12 @@ src/
   router.ts          Hash router (params + query)
   types.ts           Shared domain types
   style.css          Design system
-  data/              Seed data: stays, countries, visa matrix
+  data/              Seed data: stays, countries
   lib/               format helpers + localStorage store
   payments/          Paystack & MoMo adapters (common interface)
   components/        Page chrome, stay card
   pages/             home, search, listing, checkout, confirmation,
-                     visa, merchant, admin, login
+                     visa (pass registration), pass, merchant, admin, login
 docs/
   PROJECT_PLAN.md    Architecture & path to production
   ROADMAP.md         Phased delivery plan
