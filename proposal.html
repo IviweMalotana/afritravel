@@ -171,28 +171,32 @@
       <tbody>
         <tr><td><strong>1 · Foundations</strong></td><td>Database, API, auth (Cognito), admin CRUD, CI/CD, live data</td><td>Real accounts &amp; live inventory</td></tr>
         <tr><td><strong>2 · Payments</strong></td><td>Live Paystack + MoMo, webhooks, booking states, merchant payouts, receipts</td><td>Money moves · <span class="pill">Soft launch</span></td></tr>
-        <tr><td><strong>3 · Marketplace depth</strong></td><td>Photos, calendars &amp; dynamic pricing, search/maps, reviews, host onboarding + KYC</td><td>Self-serve marketplace</td></tr>
-        <tr><td><strong>4 · Visa-Free Pass</strong></td><td>Government rule engine, verifiable passes, immigration integration, trip planner</td><td>The differentiator · <span class="pill">Public launch</span></td></tr>
+        <tr><td><strong>3 · Marketplace depth</strong></td><td>Photos, calendars &amp; dynamic pricing, search/maps, reviews, host onboarding + KYC</td><td>Go live &amp; earning · <span class="pill">Live</span></td></tr>
+        <tr><td><strong>4 · Visa-Free Pass</strong></td><td>Government rule engine, verifiable passes, immigration integration, trip planner</td><td>The differentiator · <span class="pill">Visa launch</span></td></tr>
       </tbody>
     </table>
-    <p class="note">Phases are independently shippable — the client can pause, reorder, or stop after any phase.</p>
+    <p class="note"><strong>Track 1</strong> (phases 1–3) = 3 months to live &amp; earning. <strong>Track 2</strong> (phase 4) = +2 months for the Visa-Free Pass. Each phase is independently shippable.</p>
   </section>
 
   <!-- 6. TIMELINE -->
   <section class="slide">
     <div class="eyebrow">Proposed timeline</div>
-    <h2>~25 weeks to full public launch</h2>
-    <div class="tl-scale">
-      <span>W1</span><span></span><span></span><span></span><span>W5</span><span></span><span></span><span></span><span></span><span>W10</span><span></span><span></span><span></span><span></span><span>W15</span><span></span><span></span><span></span><span></span><span>W20</span><span></span><span></span><span></span><span></span><span>W25</span><span></span>
+    <h2>3 months to go live &amp; earning · 5 to the full vision</h2>
+    <div class="tl-scale" style="grid-template-columns:repeat(5,1fr)">
+      <span>Month 1</span><span>Month 2</span><span>Month 3</span><span>Month 4</span><span>Month 5</span>
     </div>
     <div class="tl">
-      <div class="tl-row"><span>Discovery &amp; setup</span><div class="tl-track"><div class="tl-bar" style="left:0;width:8%;background:#8a6d1f">W1</div></div></div>
-      <div class="tl-row"><span>1 · Foundations</span><div class="tl-track"><div class="tl-bar" style="left:4%;width:23%;background:var(--teal)">W1–6</div></div></div>
-      <div class="tl-row"><span>2 · Payments</span><div class="tl-track"><div class="tl-bar" style="left:24%;width:19%;background:#13937f">W7–11 · Soft launch</div></div></div>
-      <div class="tl-row"><span>3 · Marketplace depth</span><div class="tl-track"><div class="tl-bar" style="left:44%;width:31%;background:var(--teal)">W12–19</div></div></div>
-      <div class="tl-row"><span>4 · Visa-Free Pass</span><div class="tl-track"><div class="tl-bar" style="left:76%;width:24%;background:#13937f">W20–25 · Public launch</div></div></div>
+      <div class="tl-row"><span>Discovery &amp; setup</span><div class="tl-track"><div class="tl-bar" style="left:0;width:6%;background:#8a6d1f">Wk 1</div></div></div>
+      <div class="tl-row"><span>Foundations</span><div class="tl-track"><div class="tl-bar" style="left:0;width:25%;background:var(--teal)">Database · API · Auth</div></div></div>
+      <div class="tl-row"><span>Payments</span><div class="tl-track"><div class="tl-bar" style="left:25%;width:20%;background:#13937f">Paystack · MoMo · soft launch</div></div></div>
+      <div class="tl-row"><span>Marketplace core</span><div class="tl-track"><div class="tl-bar" style="left:45%;width:15%;background:var(--teal)">Photos · search ✦ GO LIVE</div></div></div>
+      <div class="tl-row" style="border-top:1px dashed var(--line);padding-top:.55rem;margin-top:.25rem"><span class="gold">Visa-Free Pass</span><div class="tl-track"><div class="tl-bar" style="left:60%;width:25%;background:#c9921f">Registration · digital passes</div></div></div>
+      <div class="tl-row"><span>Gov integration</span><div class="tl-track"><div class="tl-bar" style="left:85%;width:15%;background:#8a6d1f">Immigration · launch</div></div></div>
     </div>
-    <p class="note">Solo senior developer, part-time client check-ins. A second engineer can compress this by ~35%.</p>
+    <div class="cols" style="margin-top:.5rem">
+      <p class="note">🟢 <strong>Month 3 — live &amp; taking bookings.</strong> Foundations → payments → core marketplace.</p>
+      <p class="note">🟡 <strong>+2 months — Visa-Free Pass.</strong> Software is ~4–6 weeks; go-live is gated by government partnerships, not development.</p>
+    </div>
   </section>
 
   <!-- 7. DEVELOPER -->
@@ -221,22 +225,20 @@
   <!-- 8. INVESTMENT (BUILD) -->
   <section class="slide">
     <div class="eyebrow">Investment · development</div>
-    <h2>Build fee by phase</h2>
+    <h2>Build fee by track</h2>
     <table>
-      <thead><tr><th>Phase</th><th>Duration</th><th class="num">ZAR</th><th class="num">≈ USD</th></tr></thead>
+      <thead><tr><th>Track</th><th>Scope</th><th>Duration</th><th class="num">ZAR</th><th class="num">≈ USD</th></tr></thead>
       <tbody>
-        <tr><td>1 · Foundations</td><td>6 weeks</td><td class="num">R110,000</td><td class="num">$5,950</td></tr>
-        <tr><td>2 · Payments</td><td>5 weeks</td><td class="num">R100,000</td><td class="num">$5,400</td></tr>
-        <tr><td>3 · Marketplace depth</td><td>8 weeks</td><td class="num">R140,000</td><td class="num">$7,600</td></tr>
-        <tr><td>4 · Visa-Free Pass</td><td>6 weeks</td><td class="num">R90,000</td><td class="num">$4,860</td></tr>
-        <tr class="total"><td>Total build</td><td>~25 weeks</td><td class="num">R440,000</td><td class="num">$23,800</td></tr>
+        <tr><td><strong>1 · Go live &amp; earning</strong></td><td>Foundations · payments · core marketplace</td><td>3 months</td><td class="num">R350,000</td><td class="num">$18,900</td></tr>
+        <tr><td><strong>2 · Visa-Free Pass</strong></td><td>Registration · digital passes · gov integration</td><td>+2 months</td><td class="num">R90,000</td><td class="num">$4,860</td></tr>
+        <tr class="total"><td>Total build</td><td></td><td>~5 months</td><td class="num">R440,000</td><td class="num">$23,800</td></tr>
       </tbody>
     </table>
     <div class="cols" style="margin-top:1rem">
-      <p class="muted">💡 <strong>Launch-ready start:</strong> Phases 1–2 get you live and taking payments for <strong>R210,000</strong> (~$11,350). Later phases on approval.</p>
+      <p class="muted">💡 <strong>Go live for R350,000</strong> (~$18,900) in 3 months — then add the Visa-Free Pass program as a <strong>R90,000</strong> (~$4,860) follow-on, funded from early revenue.</p>
       <p class="muted">🛠️ <strong>Care plan (post-launch):</strong> R15,000–22,000/mo (~$810–1,190) — fixes, updates, small features, monitoring.</p>
     </div>
-    <p class="note">Fixed per-phase fees, billed on milestone sign-off. Estimates; final scope confirmed at discovery. Excludes the running costs on the next slide.</p>
+    <p class="note">Fixed-fee per track, billed on milestone sign-off. Estimates; final scope confirmed at discovery. Excludes the running costs on the next slide.</p>
   </section>
 
   <!-- 9. RUNNING COSTS -->
@@ -283,13 +285,13 @@
     <div class="eyebrow">The numbers at a glance</div>
     <h2>Total cost of ownership — year one</h2>
     <div class="cols-3">
-      <div class="card"><span class="muted">One-time build (full)</span><div class="big">R440k</div><p class="muted">~$23,800 · Phases 1–4</p></div>
+      <div class="card"><span class="muted">One-time build (full)</span><div class="big">R440k</div><p class="muted">~$23,800 · both tracks</p></div>
       <div class="card"><span class="muted">Hosting · year one</span><div class="big">~$3k</div><p class="muted">MVP tier, scales with traffic</p></div>
       <div class="card"><span class="muted">Care plan · year one</span><div class="big">~R220k</div><p class="muted">~$11,900 · optional, post-launch</p></div>
     </div>
     <div class="card" style="margin-top:1.4rem">
       <h3>Phased entry to control cash flow</h3>
-      <p class="muted">Start at <strong>R210k</strong> (Phases 1–2) to go live and take real bookings. Fund Phases 3–4 from early revenue. Payment fees only kick in once you're earning.</p>
+      <p class="muted">Go live and take real bookings for <strong>R350k</strong> (Track 1, 3 months). Fund the <strong>R90k</strong> Visa-Free Pass track from early revenue. Payment fees only kick in once you're earning.</p>
     </div>
   </section>
 
